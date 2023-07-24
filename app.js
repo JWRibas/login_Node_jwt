@@ -1,10 +1,16 @@
 require('dotenv').config()
 const express = require('express')
+const path = require('path')
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
 const app = express()
+
+const publicPath = path.join(__dirname, 'public');
+app.use(express.static(publicPath));
+
+
 
 //json res
 app.use(express.json())

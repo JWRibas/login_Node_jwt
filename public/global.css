@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-titillium-web: "Titillium Web";
+  
+    /* font sizes */
+    --font-size-base: 16px;
+    --font-size-sm: 14px;
+  
+    /* Colors */
+    --gray-50: #f8fafc;
+    --purple: #7c3aed;
+    --gray-600: #475569;
+    --color-white: #fff;
+    --gray-200: #e2e8f0;
+    --gray-400: #94a3b8;
+    --gray-800: #1e293b;
+  
+    /* Gaps */
+    --gap-base: 16px;
+    --gap-5xs: 8px;
+  
+    /* Paddings */
+    --padding-base: 16px;
+    --padding-xs: 12px;
+  
+    /* border radiuses */
+    --br-9xs: 4px;
+  }
+  
