@@ -17,30 +17,25 @@
           <div class="acesse-a-plataforma-parent"> 
             <b class="acesse-a-plataforma">Acesse a plataforma</b>
             <div class="faa-login-ou"> 
-              Faça login ou registre-se para começar a construir seus projetos
-              ainda hoje.
+              Preencha os dados para recuperar sua senha.
             </div>
           </div>
         </div>
         <div class="inputsbuttons">
             <div class="inputs-group">
                 <div class="e-mail-parent">
-        
-            <div class="e-mail">Nome</div>
-                <input class="digite-seu-e-mail-wrapper" type="text" id="name" placeholder="Digite seu Nome"/>
+
             <div class="e-mail">E-mail</div>
-                <input class="digite-seu-e-mail-wrapper" type="email" id="email" placeholder="Digite seu e-mail"/>
-            <div class="e-mail">Senha</div>
-                <input class="digite-seu-e-mail-wrapper" type="password" id="password" placeholder="Digite sua senha"/>
-            <div class="e-mail">Confirme sua Senha</div>                  
-                <input class="digite-seu-e-mail-wrapper" type="text" id="confirmpassword" placeholder="Confirme sua senha"/>
-            <div class="button" id="register-button">
-                <b class="acesse-a-plataforma">Registrar</b>
+                <input class="digite-seu-e-mail-wrapper" type="email" id="email" placeholder="Digite seu e-mail" required/>
+
+            <div class="button" type="submit" id="register-button">
+                <b class="acesse-a-plataforma">Enviar</b>
             </div>
             <div class="ainda-no-tem-container">
-                <span>Já tem uma conta? </span>
+                <span>Lembrou a senha? </span>
                 <a href="/"><b class="inscreva-se">Vá para login</b></a>
              </div>
+             <div id="message"></div>
                 </div>
             </div>
         </div>
@@ -51,6 +46,6 @@
         <div class="img-item"></div>
 
     </div>
-    <script src="/register.js"></script>
+    <script src="/forget.js"></script>
   </body>
 </html>
