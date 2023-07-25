@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name, email, password, confirmpassword })
+        body: JSON.stringify({ name, email, password, confirmPassword })
       })
         .then(response => response.json())
         .then(data => {
@@ -46,3 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
+const togglePasswordVisibilityButton = document.querySelector('#toggle-password-visibility');
+
+togglePasswordVisibilityButton.addEventListener('click', () => {
+    if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+  } else {
+    passwordInput.type = 'password';
+  }
+});

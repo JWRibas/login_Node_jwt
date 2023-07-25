@@ -56,7 +56,7 @@ function checkToken(req, res, next) {
 
 //users
 app.post('/auth/register', async(req, res) => {
-    const {name, email, password, confirmpassword } = req.body
+    const {name, email, password, confirmPassword } = req.body
 
     if(!name) {
         return res.status(422).json({msg: 'nome obrigatório'})
@@ -70,7 +70,7 @@ app.post('/auth/register', async(req, res) => {
         return res.status(422).json({msg: 'senha obrigatório'})
     }
 
-    if(password != confirmpassword) {
+    if(password != confirmPassword) {
         return res.status(422).json({msg: 'senhas não conferem'})
     }
 
