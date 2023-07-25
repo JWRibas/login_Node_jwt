@@ -9,7 +9,12 @@ const nodemailer = require('nodemailer');
 const app = express();
 
 const publicPath = path.join(__dirname, 'public');
-app.use(express.static(publicPath));
+app.use(express.static(publicPath)); 
+
+app.get('/reset-password', (req, res) => {
+    res.sendFile(path.join(__dirname, 'reset.html'));
+  });
+  
 
 app.use(express.json());
 
@@ -173,8 +178,8 @@ app.post('/auth/forgot-password', async (req, res) => {
           from: '"Estudo Login" <ribasvasconcelos.wr@gmail.com>',
           to: email,
           subject: 'Redefinição de Senha',
-          text: `Olá, ${user.name}! Para redefinir sua senha, acesse o link a seguir: https://loginjwtnode.onrender.com/auth/reset-password?token=${token}`,
-          html: `<p>Olá, ${user.name}!</p><p>Para redefinir sua senha, acesse o link a seguir:</p><p><a href="https://loginjwtnode.onrender.com/auth/reset-password?token=${token}">Redefinir Senha</a></p>`
+          text: `Olá, ${user.name}! Para redefinir sua senha, acesse o link a seguir: https://loginjwtnode.onrender.com/reset?token=${token}`,
+          html: `<p>Olá, ${user.name}!</p><p>Para redefinir sua senha, acesse o link a seguir:</p><p><a href="https://loginjwtnode.onrender.com/reset?token=${token}">Redefinir Senha</a></p>`
       });
 
       res.status(200).json({ msg: 'E-mail enviado com sucesso' });
