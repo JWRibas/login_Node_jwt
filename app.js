@@ -178,8 +178,8 @@ app.post('/auth/forgot-password', async (req, res) => {
           from: '"Estudo Login" <ribasvasconcelos.wr@gmail.com>',
           to: email,
           subject: 'Redefinição de Senha',
-          text: `Olá, ${user.name}! Para redefinir sua senha, acesse o link a seguir: https://loginjwtnode.onrender.com/reset?token=${token}`,
-          html: `<p>Olá, ${user.name}!</p><p>Para redefinir sua senha, acesse o link a seguir:</p><p><a href="https://loginjwtnode.onrender.com/reset?token=${token}">Redefinir Senha</a></p>`
+          text: `Olá, ${user.name}! Para redefinir sua senha, acesse o link a seguir: https://loginjwtnode.onrender.com/reset.html?token=${token}`,
+          html: `<p>Olá, ${user.name}!</p><p>Para redefinir sua senha, acesse o link a seguir:</p><p><a href="https://loginjwtnode.onrender.com/reset.html?token=${token}">Redefinir Senha</a></p>`
       });
 
       res.status(200).json({ msg: 'E-mail enviado com sucesso' });
